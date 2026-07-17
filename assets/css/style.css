@@ -1,0 +1,237 @@
+/* ============================================================
+   FILE: assets/css/style.css
+   Custom styles untuk SPMB SMK KP Baros
+   Warna utama diambil dari logo: Biru (#0077B6), Kuning (#F9C74F), Hijau (#52B788)
+   ============================================================ */
+
+/* ===== VARIABEL WARNA ===== */
+:root {
+    --biru-tua:    #023E8A;
+    --biru-utama:  #0077B6;
+    --biru-muda:   #0096C7;
+    --kuning:      #F9C74F;
+    --hijau:       #52B788;
+    --merah:       #E63946;
+    --abu-gelap:   #343A40;
+    --abu-muda:    #F8F9FA;
+    --sidebar-w:   240px;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EEF2F7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.spmb-navbar {
+    background: linear-gradient(135deg, var(--biru-tua) 0%, var(--biru-utama) 100%);
+    box-shadow: 0 2px 10px rgba(2, 62, 138, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 64px;
+}
+
+.navbar-logo {
+    height: 46px;
+    width: 46px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--kuning);
+    background: white;
+    padding: 2px;
+}
+
+/* ===== SIDEBAR ===== */
+.spmb-sidebar {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    min-height: calc(100vh - 64px - 36px);
+    background: linear-gradient(180deg, var(--biru-tua) 0%, #034078 100%);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+}
+
+.sidebar-heading {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.sidebar-link {
+    color: rgba(255,255,255,0.75) !important;
+    border-radius: 8px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255,255,255,0.12);
+    color: #fff !important;
+}
+
+.sidebar-link.active {
+    background-color: var(--kuning) !important;
+    color: var(--biru-tua) !important;
+    font-weight: 600;
+}
+
+/* ===== KONTEN UTAMA ===== */
+.spmb-content {
+    min-height: calc(100vh - 64px - 36px);
+}
+
+/* ===== FOOTER ===== */
+.spmb-footer {
+    background: var(--biru-tua);
+    font-size: 0.8rem;
+}
+
+/* ===== KARTU STATISTIK DASHBOARD ===== */
+.stat-card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.stat-card .card-icon {
+    font-size: 2.4rem;
+    opacity: 0.85;
+}
+
+.stat-card-total   { background: linear-gradient(135deg, var(--biru-utama), var(--biru-muda)); color: white; }
+.stat-card-gel1    { background: linear-gradient(135deg, var(--hijau), #74C69D); color: white; }
+.stat-card-gel2    { background: linear-gradient(135deg, #F77F00, #F4A261); color: white; }
+.stat-card-gel3    { background: linear-gradient(135deg, #7B2D8B, #A855F7); color: white; }
+.stat-card-terima  { background: linear-gradient(135deg, #2DC653, #52B788); color: white; }
+.stat-card-pending { background: linear-gradient(135deg, #F9C74F, #F8961E); color: white; }
+
+/* ===== TABEL DATA ===== */
+.tabel-siswa thead {
+    background: linear-gradient(135deg, var(--biru-tua), var(--biru-utama));
+    color: white;
+    font-size: 0.85rem;
+}
+
+.tabel-siswa tbody tr:hover {
+    background-color: #E8F4FD;
+}
+
+/* ===== BADGE STATUS ===== */
+.badge-diterima { background-color: var(--hijau) !important; }
+.badge-pending  { background-color: #F9C74F !important; color: var(--abu-gelap) !important; }
+.badge-ditolak  { background-color: var(--merah) !important; }
+
+/* ===== FORM ===== */
+.form-card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.form-card .card-header {
+    background: linear-gradient(135deg, var(--biru-tua), var(--biru-utama));
+    color: white;
+    border-radius: 14px 14px 0 0 !important;
+    padding: 1rem 1.5rem;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #444;
+}
+
+/* ===== HALAMAN LOGIN ===== */
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--biru-tua) 0%, var(--biru-muda) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    max-width: 420px;
+    width: 100%;
+}
+
+.login-card .login-header {
+    background: var(--biru-tua);
+    padding: 2rem;
+    text-align: center;
+}
+
+.login-logo {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 3px solid var(--kuning);
+    background: white;
+    padding: 4px;
+    margin-bottom: 0.75rem;
+}
+
+/* ===== HALAMAN DETAIL SISWA ===== */
+.detail-label {
+    font-weight: 600;
+    color: var(--biru-tua);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.detail-value {
+    font-size: 1rem;
+    color: #222;
+}
+
+/* ===== TOMBOL ===== */
+.btn-spmb-primary {
+    background: linear-gradient(135deg, var(--biru-utama), var(--biru-muda));
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.5rem 1.4rem;
+    transition: opacity 0.2s;
+}
+.btn-spmb-primary:hover { opacity: 0.85; color: white; }
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+    font-weight: 700;
+    color: var(--biru-tua);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-title-bar {
+    width: 5px;
+    height: 28px;
+    background: var(--kuning);
+    border-radius: 3px;
+    display: inline-block;
+}
